@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas:    'header header header header'
+                            'section section aside aside'
+                            'footer footer footer footer';
+    grid-template-columns: 25vw 35vw 15vw 25vw;
+    grid-template-rows: 10vw 50vw 10vw;
+}
+
+header{
+    grid-area: header; 
+}
+
+section{
+    grid-area: section;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+section #caixa {
+    border: 10px solid black;
+    border-radius: 100%;
+    display: grid;
+    grid-template-areas:  'vermelho verde'
+                'azul amarelo';
+    grid-gap: 5px;
+    /* grid-template-columns: 45% 45%; */
+    /* grid-template-rows: 45% 45%; */
+    height: 600px;
+    width: 660px;
+    background-color:black;
+}
+
+section div div:first-child{
+    border-top-left-radius: 100%;
+    grid-area: vermelho;
+    background-color: red;
+}
+
+section div div:nth-child(2){
+    border-top-right-radius: 100%;
+    grid-area: verde;
+    background-color: green;
+}
+
+
+section div div:nth-child(3){
+    border-bottom-right-radius: 100%;
+    grid-area: amarelo;
+    background-color: yellow;
+}
+
+section div div:last-child{
+    border-bottom-left-radius: 100%;
+    grid-area: azul;
+    background-color: blue;
+}
+
+#botao{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color:white;
+    border: 5px solid black;
+    position: absolute;
+    top: 338px;
+    left: 290px;
+}
+
+#botao:hover{
+
+    background-color:rgb(211, 207, 207); 
+}
+aside{
+    grid-area: aside;
+}
+
+footer{
+    grid-area: footer;
+}
+#placar{
+    background-color:#4DB4E8;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+    border: 10px solid black;
+
+}
+#placar h3{
+    color: rgb(248, 224, 11);
+    font-size: 20px;
+}
+#placar p{
+    color: aliceblue;
+    font-size: 20px;
+    margin-top: 0;
+    font-family: 'Anton', sans-serif;
+
+}
